@@ -3,11 +3,10 @@ import "normalize.css";
 import "./App.css";
 import ctl from "@netlify/classnames-template-literals";
 import Jokes from "./Jokes";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import arrow up and arrow down
 
-
-import {faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState([]);
@@ -15,8 +14,7 @@ function App() {
 
   const handleShowMore = () => {
     setJokesToShow(jokesToShow + 5);
-  }
-
+  };
 
   const handleShow = (index) => {
     if (activeIndex.includes(index)) {
@@ -30,8 +28,7 @@ function App() {
     <div className={sectionStyles}>
       <div className={accordionStyles}>
         <h2 className={titleStyles}>Jokes World :)</h2>
-        {
-          Jokes.slice(0, jokesToShow).map((data, index) => (
+        {Jokes.slice(0, jokesToShow).map((data, index) => (
           <Item
             key={data.id}
             question={data.question}
@@ -42,7 +39,9 @@ function App() {
           </Item>
         ))}
         {Jokes.length > jokesToShow && (
-          <button onClick={handleShowMore} className={showMoreStyles}>Show More</button>
+          <button onClick={handleShowMore} className={showMoreStyles}>
+            Show More
+          </button>
         )}
       </div>
     </div>
@@ -62,7 +61,6 @@ function Item({ question, children, active, onShow }) {
         >
           <FontAwesomeIcon icon={active ? faAngleUp : faAngleDown} />
         </button>
-        
       </div>
 
       <div>
@@ -139,7 +137,6 @@ py-5
   text-base
   text-gray-700
   `);
-
 
 const showMoreStyles = ctl(`
   bg-green-500

@@ -30,13 +30,13 @@ A simple accordion-style app that displays a list of jokes, allowing the user to
 ```bash
   git clone <https://link-to-project>
 ```
-  
+
 - Go to the project directory
 
 ```bash
   cd jokes-world
 ```
-  
+
 - Install dependencies
 
 ```bash
@@ -44,7 +44,7 @@ A simple accordion-style app that displays a list of jokes, allowing the user to
 ```
 
 - Start the server
-Copy code
+  Copy code
 
 ```bash
   npm run dev
