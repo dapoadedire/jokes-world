@@ -5,6 +5,7 @@ A simple accordion-style app that displays a list of jokes, allowing the user to
 ## Tech Stack
 
 - React
+- Tailwind CSS
 - @netlify/classnames-template-literals
 - @fortawesome/react-fontawesome
 - @fortawesome/free-solid-svg-icons
@@ -13,6 +14,7 @@ A simple accordion-style app that displays a list of jokes, allowing the user to
 
 - How to use useState hook in React to manage component state
 - How to use template literals with classnames for dynamic CSS styling
+- How to use Font Awesome icons in a React application
 - How to use Font Awesome icons in a React application
 
 ## Feature(s)
