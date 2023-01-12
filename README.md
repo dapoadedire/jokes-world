@@ -9,6 +9,12 @@ A simple accordion-style app that displays a list of jokes, allowing the user to
 
 ## Demo
 
+
+
+https://user-images.githubusercontent.com/95668340/212056187-b75ae536-f5d3-4e89-b9f1-5542b918ecbb.mp4
+
+
+
 ## Tech Stack
 
 - React
