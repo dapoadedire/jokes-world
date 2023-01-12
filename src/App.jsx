@@ -11,6 +11,12 @@ import {faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   const [activeIndex, setActiveIndex] = useState([]);
+  const [jokesToShow, setJokesToShow] = useState(5);
+
+  const handleShowMore = () => {
+    setJokesToShow(jokesToShow + 5);
+  }
+
 
   const handleShow = (index) => {
     if (activeIndex.includes(index)) {
@@ -24,7 +30,8 @@ function App() {
     <div className={sectionStyles}>
       <div className={accordionStyles}>
         <h2 className={titleStyles}>Jokes World :)</h2>
-        {Jokes.map((data, index) => (
+        {
+          Jokes.slice(0, jokesToShow).map((data, index) => (
           <Item
             key={data.id}
             question={data.question}
@@ -34,6 +41,9 @@ function App() {
             {data.answer}
           </Item>
         ))}
+        {Jokes.length > jokesToShow && (
+          <button onClick={handleShowMore} className={showMoreStyles}>Show More</button>
+        )}
       </div>
     </div>
   );
@@ -129,5 +139,15 @@ py-5
   text-base
   text-gray-700
   `);
+
+
+const showMoreStyles = ctl(`
+  bg-green-500
+  text-white
+  px-4
+  py-2
+  rounded
+
+`);
 
 export default App;
