@@ -72,71 +72,65 @@ function Item({ question, children, active, onShow }) {
 }
 
 const sectionStyles = ctl(`
-  bg-gray-100
-  p-4
-  rounded
-  border-2
-  
-
+  my-10
+  px-3
   `);
 
 const itemStyles = ctl(`
   flex
-  justify-between
   items-center
+  justify-between
   `);
 
 const containerChildStyles = ctl(`
-  bg-gray-100
-  p-3
-  rounded
-  border-2
-   border-gray-300
   my-5
-  `);
-
-const accordionStyles = ctl(`
-  bg-gray-100
-  w-8/10
-  md:w-2/3
-  lg:w-2/3
-  xl:w-3/5
-  
-
-
-  p-4
   rounded
   border-2
   border-gray-300
+   bg-gray-100
+  p-3
+  `);
+
+const accordionStyles = ctl(`
   mx-auto
+  rounded
+  border-2
+  border-gray-300
+  bg-gray-100
+  p-4
+
+  md:w-2/3
+  lg:w-2/3
+  xl:w-3/5
+  2xl:w-3/5
   `);
 
 const titleStyles = ctl(`
-  text-3xl
-  text-center
   mb-5
-  text-green-700
+  text-center
+  text-3xl
   font-bold
+  text-green-700
   
   `);
 
 const buttonStyles = ctl(`
-  text-white
+  my-0
+  ml-1
+  cursor-pointer
+  rounded
   px-4
   py-2
-  rounded
   text-2xl
-  ml-1
-  my-0
-  cursor-pointer
+  text-white
   
   `);
 
 const questionStyles = ctl(`
-  text-base
-  text-gray
-  font-semibold
   mb-0
+  text-base
+  font-semibold
+  text-black
   `);
 
 const answerStyles = ctl(`
@@ -146,12 +140,12 @@ py-5
   `);
 
 const showMoreStyles = ctl(`
+  mt-3
+  rounded
   bg-green-500
-  text-white
   px-4
   py-2
-  rounded
-  mt-3
+  text-white
   
 
 `);
