@@ -11,7 +11,7 @@ import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 function App() {
   const [activeIndex, setActiveIndex] = useState([]);
   const [jokesToShow, setJokesToShow] = useState(5);
-  
+
   const handleShowMore = () => {
     setJokesToShow(jokesToShow + 5);
   };
@@ -26,7 +26,6 @@ function App() {
 
   return (
     <div className={sectionStyles}>
-     
       <div className={accordionStyles}>
         <h2 className={titleStyles}>Jokes World :D</h2>
         {Jokes.slice(0, jokesToShow).map((data, index) => (
@@ -51,21 +50,21 @@ function App() {
 
 function Item({ question, children, active, onShow }) {
   // eslint-disable-next-line no-unused-vars
-  const [parent, enableAnimations] = useAutoAnimate(
-    { duration: 400 }
-  )
+  const [parent, enableAnimations] = useAutoAnimate({ duration: 400 });
   return (
     <div className={containerChildStyles} ref={parent}>
       <div className={itemStyles}>
         <p className={questionStyles}>{question}</p>
-        
-          <FontAwesomeIcon icon={active ? faAngleUp : faAngleDown} onClick={onShow}
-            className={`${buttonStyles} ${active ? "bg-red-500" : "bg-green-500"
-              }`} />
-      
+
+        <FontAwesomeIcon
+          icon={active ? faAngleUp : faAngleDown}
+          onClick={onShow}
+          className={`${buttonStyles} ${
+            active ? "bg-red-500" : "bg-green-500"
+          }`}
+        />
       </div>
 
-      
       {active && <p className={answerStyles}>{children}</p>}
     </div>
   );
